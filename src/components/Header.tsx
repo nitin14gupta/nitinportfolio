@@ -15,12 +15,24 @@ const sections = [
 export default function Header() {
   const [hidden, setHidden] = useState(false);
   const [lastY, setLastY] = useState(0);
+  const [active, setActive] = useState<string>("home");
 
   useEffect(() => {
     const onScroll = () => {
       const y = window.scrollY;
       setHidden(y > 80 && y > lastY);
       setLastY(y);
+      // active link detection
+      const ids = sections.map((s) => s.id);
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= 120 && rect.bottom >= 120) {
+          setActive(id);
+          break;
+        }
+      }
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -35,15 +47,15 @@ export default function Header() {
       <div className="glass mx-4 mt-4 rounded-2xl px-4 py-3 md:mx-6 md:px-6">
         <div className="flex items-center justify-between">
           <Link href="#home" className="group inline-flex items-center gap-2">
-            <span className="inline-grid place-items-center h-9 w-9 rounded-full bg-[rgba(188,19,254,0.15)] border border-[rgba(188,19,254,0.35)] text-white font-semibold tracking-widest neon-text">NG</span>
+            {/* <span className="inline-grid place-items-center h-9 w-9 rounded-full bg-[rgba(188,19,254,0.15)] border border-[rgba(188,19,254,0.35)] text-white font-semibold tracking-widest neon-text">NG</span> */}
             <span className="hidden sm:block text-sm text-[var(--text-muted)]">Nitin Gupta</span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-6 text-sm">
             {sections.map((s) => (
-              <a key={s.id} href={`#${s.id}`} className="relative text-[var(--text-muted)] hover:text-white transition-colors">
+              <a key={s.id} href={`#${s.id}`} className={`relative transition-colors ${active===s.id?"text-white":"text-[var(--text-muted)]"}`}>
                 {s.label}
-                <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-[var(--primary)] shadow-[var(--glow-lg)] transition-all group-hover:w-full" />
+                <span className={`absolute -bottom-2 left-0 h-[2px] bg-[var(--primary)] shadow-[var(--glow-lg)] transition-all ${active===s.id?"w-full":"w-0"}`} />
               </a>
             ))}
           </nav>

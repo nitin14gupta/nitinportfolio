@@ -16,7 +16,7 @@ export default function Contact() {
     <section id="contact" className="section nav-offset">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-6 md:grid-cols-2">
         <form onSubmit={handleSubmit(onSubmit)} className="glass neon-ring rounded-2xl p-6">
-          <h2 className="text-3xl font-bold neon-text">Let's Work Together</h2>
+          <h2 className="text-3xl font-bold neon-text">Let&apos;s Work Together</h2>
           <div className="mt-6 grid grid-cols-1 gap-4">
             <input className="rounded-lg bg-[rgba(26,11,31,0.6)] border border-[rgba(188,19,254,0.35)] px-3 py-3" placeholder="Name" {...register("name", { required: true })} />
             <input className="rounded-lg bg-[rgba(26,11,31,0.6)] border border-[rgba(188,19,254,0.35)] px-3 py-3" placeholder="Email" type="email" {...register("email", { required: true })} />

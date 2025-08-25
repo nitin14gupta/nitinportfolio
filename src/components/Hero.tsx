@@ -26,7 +26,7 @@ export default function Hero() {
     <section id="home" className="section min-h-screen flex items-center">
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-10 px-6 md:grid-cols-2 md:gap-12">
         <div className="flex flex-col justify-center">
-          <p className="text-sm text-[var(--text-muted)]">Hello, I'm</p>
+          <p className="text-sm text-[var(--text-muted)]">Hello, I&apos;m</p>
           <h1 className="mt-2 text-5xl md:text-6xl font-extrabold tracking-tight neon-text">NITIN GUPTA</h1>
           <p className="mt-4 text-xl md:text-2xl text-[var(--text-muted)]">React Native Developer</p>
           <div className="mt-8 flex gap-4">

@@ -2,10 +2,11 @@
 // @ts-nocheck
 
 import { useEffect } from "react";
+import Lenis from "@studio-freight/lenis";
 
 export function useLenis() {
   useEffect(() => {
-    let lenis: any;
+    let lenis: Lenis;
     (async () => {
       const { default: Lenis } = await import("@studio-freight/lenis");
       lenis = new Lenis({

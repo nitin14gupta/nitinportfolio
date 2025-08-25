@@ -12,7 +12,7 @@ const projects = [
   { title: "Project 6", tags: ["Tailwind"], demo: "#", git: "#" },
 ];
 
-const filters = ["All", "Web", "Mobile", "3D"] as const;
+const filters = ["All"] as const;
 
 export default function Projects() {
   const [filter, setFilter] = useState<(typeof filters)[number]>("All");

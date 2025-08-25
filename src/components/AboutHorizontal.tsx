@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function AboutHorizontal() {
   return (
@@ -17,10 +18,12 @@ export default function AboutHorizontal() {
           >
             <div className="flex items-start gap-5">
               <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-2xl neon-ring">
-                <img
+                <Image
                   alt="Nitin Gupta"
-                  src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=640&auto=format&fit=crop"
+                  src= "/images/about.jpg"
                   className="h-full w-full object-cover"
+                  width={40}
+                  height={40}
                 />
               </div>
               <div>

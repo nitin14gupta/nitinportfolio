@@ -1,9 +1,9 @@
 declare module "gsap" {
-  const value: any;
+  const value: unknown;
   export default value;
 }
 declare module "gsap/ScrollTrigger" {
-  export const ScrollTrigger: any;
+  export const ScrollTrigger: unknown;
 }
 
 
