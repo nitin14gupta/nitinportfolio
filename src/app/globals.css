@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+/* Neon Purple Design System */
+:root {
+  /* Base surfaces */
+  --background: #0a0a0a; /* Dark Background */
+  --surface-2: #1a0b1f; /* Secondary Background */
+  --surface-3: #341539; /* Dark Purple Cards */
+
+  /* Brand */
+  --primary: #bc13fe; /* Primary Neon Purple */
+  --primary-2: #be00fe; /* Electric Purple */
+  --secondary: #7d12ff; /* Deep Purple */
+
+  /* Accents */
+  --accent-cyan: #00ffff;
+  --success: #3eff15;
+  --warning: #fff857;
+
+  /* Text */
+  --text: #ffffff;
+  --text-muted: #b8b8b8;
+
+  /* Glow presets */
+  --glow-lg: 0 0 24px rgba(188, 19, 254, 0.6), 0 0 48px rgba(190, 0, 254, 0.35);
+  --glow-cyan: 0 0 20px rgba(0, 255, 255, 0.55);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--text);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(60rem 60rem at 80% -10%, rgba(125, 18, 255, 0.15), transparent 60%),
+    radial-gradient(40rem 40rem at -10% 70%, rgba(190, 0, 254, 0.15), transparent 60%),
+    var(--background);
+  color: var(--text);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism surface */
+.glass {
+  background: rgba(26, 11, 31, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(188, 19, 254, 0.25);
+}
+
+/* Neon utilities */
+.neon-text {
+  text-shadow: var(--glow-lg);
+}
+
+.neon-ring {
+  box-shadow: inset 0 0 0 1px rgba(188, 19, 254, 0.6), var(--glow-lg);
+}
+
+.neon-cyan {
+  box-shadow: var(--glow-cyan);
+}
+
+/* Section container spacing */
+.section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+/* Scrollbar styling (WebKit) */
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-thumb { background: linear-gradient(180deg, var(--primary), var(--secondary)); border-radius: 999px; }
+*::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); }
+
+/* Smooth anchor scroll offset helper */
+.nav-offset { scroll-margin-top: 96px; }
