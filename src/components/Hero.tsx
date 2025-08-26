@@ -36,8 +36,12 @@ export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     (async () => {
-      const g: any = (await import("gsap")).default as unknown as any;
-      const { ScrollTrigger }: any = await import("gsap/ScrollTrigger");
+      type GSAP = {
+        registerPlugin: (...plugins: unknown[]) => void;
+        to: (target: unknown, vars: unknown) => unknown;
+      };
+      const g = (await import("gsap")).default as unknown as GSAP;
+      const { ScrollTrigger } = (await import("gsap/ScrollTrigger")) as { ScrollTrigger: unknown };
       g.registerPlugin(ScrollTrigger);
       const el = containerRef.current!;
       g.to(el, {
