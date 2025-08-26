@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Footer from "../components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,7 +26,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{""}
+        {/* Motion toggle + preloader */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(() => {
+              try {
+                const key = 'reduce-motion';
+                const val = localStorage.getItem(key);
+                if (val === '1') document.body.classList.add('reduce-motion');
+              } catch {}
+            })();`,
+          }}
+        />
         {children}
+        <Footer />
       </body>
     </html>
   );

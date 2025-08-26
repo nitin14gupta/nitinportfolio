@@ -26,14 +26,6 @@ export default function Home() {
         <Projects />
         <Services />
         <Contact />
-
-        <footer className="section pt-16">
-          <div className="mx-auto max-w-7xl px-6 text-center text-sm text-[var(--text-muted)]">
-            <div className="h-px w-full bg-gradient-to-r from-transparent via-[var(--primary)] to-transparent mb-6" />
-            <p>© 2025 Nitin Gupta. All rights reserved.</p>
-            <p className="mt-1">Made with 💜 using Three.js, GSAP & Next.js</p>
-          </div>
-        </footer>
       </main>
     </div>
   );
