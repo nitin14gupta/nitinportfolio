@@ -20,10 +20,10 @@ export default function AboutHorizontal() {
               <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-2xl neon-ring">
                 <Image
                   alt="Nitin Gupta"
-                  src= "/images/about.jpg"
+                  src= "/images/hero.png"
                   className="h-full w-full object-cover"
-                  width={40}
-                  height={40}
+                  width={100}
+                  height={100}
                 />
               </div>
               <div>
