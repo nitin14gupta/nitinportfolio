@@ -28,7 +28,7 @@ export default function AboutHorizontal() {
               </div>
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold neon-text">Nitin Gupta</h2>
-                <p className="mt-1 text-[var(--accent-cyan)]">React Native Developer • 3D & Motion Enthusiast</p>
+                <p className="mt-1 text-[var(--accent-cyan)]">React Native Developer • ML Engineer • AI Enthusiast</p>
                 <p className="mt-3 text-[var(--text-muted)]">
                   I build high‑performance mobile apps and futuristic interfaces with React Native, Three.js and GSAP. I love
                   crafting playable micro‑interactions, smooth scroll experiences, and polished design systems in neon purple.
@@ -50,9 +50,9 @@ export default function AboutHorizontal() {
             {/* Stats */}
             <div className="mt-6 grid grid-cols-3 gap-4">
               {[
-                { k: "Years", v: "6+" },
+                { k: "Years", v: "2+" },
                 { k: "Apps", v: "20+" },
-                { k: "Clients", v: "30+" },
+                { k: "Clients", v: "22+" },
               ].map((s) => (
                 <div key={s.k} className="rounded-xl bg-[rgba(26,11,31,0.6)] border border-[rgba(188,19,254,0.25)] p-4 text-center">
                   <div className="text-2xl font-bold text-[var(--accent-cyan)]">{s.v}</div>
@@ -80,7 +80,7 @@ export default function AboutHorizontal() {
                     "Shipping cross‑platform apps, performance tuning, native modules, and animations with Reanimated/GSAP.",
                 },
                 {
-                  year: "2017–2023",
+                  year: "2022–2023",
                   role: "Graphic/Brand Designer → Product UI",
                   body:
                     "Led campaign assets and booth graphics; transitioned to UI engineering bringing motion design into apps.",
