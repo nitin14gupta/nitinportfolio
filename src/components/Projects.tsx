@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const projects = [
-  { title: "VBook Teaching Platform", tags: ["React", "Node", "Postgres"], demo: "#", git: "#" },
+  { title: "Literacy", tags: ["React", "Node", "Postgres"], demo: "https://megahackathon.vercel.app", git: "#" },
   { title: "Jilzo", tags: ["React Native", "Tailwind"], demo: "https://jilzo.com", git: "#" },
-  { title: "SafarSaathi", tags: ["TS", "React Native"], demo: "#", git: "#" },
+  { title: "SafarSaathi", tags: ["TS", "React Native"], demo: undefined, git: "#" },
 ];
 
 const filters = ["All"] as const;
@@ -44,7 +44,11 @@ export default function Projects() {
                   ))}
                 </div>
                 <div className="mt-5 flex gap-4 text-sm">
-                  <a href={p.demo} className="text-[var(--accent-cyan)] hover:underline">Demo</a>
+                  {p.demo ? (
+                    <a href={p.demo} className="text-[var(--accent-cyan)] hover:underline">Demo</a>
+                  ) : (
+                    <span className="text-[var(--text-muted)]">Demo: Coming soon</span>
+                  )}
                   <a href={p.git} className="text-[var(--accent-cyan)] hover:underline">GitHub</a>
                 </div>
               </div>

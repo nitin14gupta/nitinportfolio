@@ -3,8 +3,7 @@
 
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Float, Sphere, MeshDistortMaterial, Stars, Image as DreiImage } from "@react-three/drei";
-import { useEffect, useRef } from "react";
+import { OrbitControls, Float, Sphere, MeshDistortMaterial, Stars } from "@react-three/drei";
 
 function Scene() {
   return (
@@ -16,16 +15,6 @@ function Scene() {
           <MeshDistortMaterial color="#BC13FE" emissive="#7D12FF" emissiveIntensity={2} roughness={0.2} metalness={0.3} distort={0.35} speed={1.8} />
         </Sphere>
       </Float>
-      {/* Personal portrait layered near the blob */}
-      <Float speed={0.8} rotationIntensity={0.4} floatIntensity={0.6}>
-        <DreiImage
-          url="/images/hero.png"
-          scale={[3.6, 4.2]}
-          position={[0, -0.6, 1.6]}
-          transparent
-          toneMapped={false}
-        />
-      </Float>
       <Stars radius={50} depth={20} count={1200} factor={2} saturation={0} fade speed={1} />
       <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.6} />
     </>
@@ -33,30 +22,8 @@ function Scene() {
 }
 
 export default function Hero() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    (async () => {
-      type GSAP = {
-        registerPlugin: (...plugins: unknown[]) => void;
-        to: (target: unknown, vars: unknown) => unknown;
-      };
-      const g = (await import("gsap")).default as unknown as GSAP;
-      const { ScrollTrigger } = (await import("gsap/ScrollTrigger")) as { ScrollTrigger: unknown };
-      g.registerPlugin(ScrollTrigger);
-      const el = containerRef.current!;
-      g.to(el, {
-        scrollTrigger: {
-          trigger: el,
-          start: "top top",
-          end: "+=600",
-          scrub: 1,
-          pin: true,
-        },
-      });
-    })();
-  }, []);
   return (
-    <section id="home" ref={containerRef} className="section min-h-screen flex items-center">
+    <section id="home" className="section min-h-screen flex items-center">
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-10 px-6 md:grid-cols-2 md:gap-12">
         <div className="flex flex-col justify-center">
           <p className="text-sm text-[var(--text-muted)]">Hello, I&apos;m</p>
@@ -78,5 +45,3 @@ export default function Hero() {
     </section>
   );
 }
-
-

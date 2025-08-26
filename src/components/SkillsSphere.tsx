@@ -86,13 +86,11 @@ export default function SkillsSphere() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex items-end justify-between gap-6">
           <h2 className="text-3xl md:text-4xl font-bold neon-text">Skills Playground</h2>
-          <div className="hidden md:flex items-center gap-3 text-sm text-[var(--text-muted)]">
-            <span className="inline-block h-3 w-3 rounded-full bg-[var(--primary)]" /> Click a skill to focus • Drag to orbit
-          </div>
+          <div className="hidden md:flex items-center gap-3 text-sm text-[var(--text-muted)]" />
         </div>
-        <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-[1.5fr_1fr]">
-          <div className="h-[420px] w-full rounded-2xl neon-ring">
-          <Suspense fallback={<div className="grid h-full place-items-center text-[var(--text-muted)]">Loading 3D…</div>}>
+        <div className="mt-6 grid grid-cols-1">
+          <div className="h-[600px] w-full rounded-2xl neon-ring grid place-items-center">
+          <Suspense fallback={<div className="flex justify-center items-center text-[var(--text-muted)]">Loading 3D…</div>}>
             <Canvas camera={{ position: [0, 0, 5] }} dpr={[1, 1.8]} frameloop="always">
               <ambientLight intensity={0.6} />
               <directionalLight position={[2, 2, 2]} intensity={1.2} />
@@ -103,16 +101,6 @@ export default function SkillsSphere() {
               <AdaptiveDpr pixelated />
             </Canvas>
           </Suspense>
-          </div>
-          <div className="glass neon-ring rounded-2xl p-6">
-            <div className="text-sm text-[var(--text-muted)]">Selected</div>
-            <div className="mt-1 text-2xl font-semibold">{selected ?? "None"}</div>
-            <div className="mt-4 grid grid-cols-2 gap-3 text-sm">
-              <button onClick={() => selected && window.open('#', '_blank')} className="rounded-lg border border-[rgba(188,19,254,0.35)] px-3 py-2 hover:bg-[rgba(188,19,254,0.08)]">Related Projects</button>
-              <button onClick={() => selected && window.open('https://google.com/search?q=' + encodeURIComponent(selected + ' docs'), '_blank')} className="rounded-lg border border-[rgba(188,19,254,0.35)] px-3 py-2 hover:bg-[rgba(188,19,254,0.08)]">Open Docs</button>
-              <button onClick={() => selected && window.open('https://google.com/search?q=' + encodeURIComponent(selected + ' examples'), '_blank')} className="rounded-lg border border-[rgba(188,19,254,0.35)] px-3 py-2 hover:bg-[rgba(188,19,254,0.08)]">Show Demos</button>
-              <button onClick={() => alert(selected ? `Playing ${selected} animation` : 'Pick a skill')} className="rounded-lg border border-[rgba(188,19,254,0.35)] px-3 py-2 hover:bg-[rgba(188,19,254,0.08)]">Play Animation</button>
-            </div>
           </div>
         </div>
       </div>
