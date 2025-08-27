@@ -130,8 +130,40 @@ export default function Contact() {
           <div className="absolute inset-0 bg-[radial-gradient(600px_200px_at_30%_30%,rgba(188,19,254,0.2),transparent),radial-gradient(300px_300px_at_80%_70%,rgba(0,255,255,0.15),transparent)]" />
           <div className="relative">
             <h3 className="text-2xl font-semibold">Connect</h3>
-            <p className="mt-3 text-[var(--text-muted)]">LinkedIn | GitHub | Twitter</p>
-            <p className="mt-4 text-[var(--text-muted)]">nitincmgupta@email.com</p>
+            <div className="mt-3 flex flex-wrap gap-4 text-[var(--text-muted)]">
+              <a
+                href="https://www.linkedin.com/in/nitinCMgupta/"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="hover:text-[var(--primary)] underline decoration-transparent hover:decoration-[var(--primary)] decoration-2 underline-offset-4"
+              >
+                LinkedIn
+              </a>
+              <span className="opacity-60">|</span>
+              <a
+                href="https://www.instagram.com/nitin.shh_"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="hover:text-[var(--primary)] underline decoration-transparent hover:decoration-[var(--primary)] decoration-2 underline-offset-4"
+              >
+                Instagram
+              </a>
+              <span className="opacity-60">|</span>
+              <a
+                href="https://x.com/CMNitingupta"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="hover:text-[var(--primary)] underline decoration-transparent hover:decoration-[var(--primary)] decoration-2 underline-offset-4"
+              >
+                X (Twitter)
+              </a>
+            </div>
+            <a
+              href="mailto:nitincmgupta@email.com"
+              className="mt-4 inline-block text-[var(--text-muted)] hover:text-[var(--primary)]"
+            >
+              nitincmgupta@email.com
+            </a>
           </div>
         </motion.div>
       </div>
