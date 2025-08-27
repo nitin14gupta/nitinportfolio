@@ -80,7 +80,7 @@ function Words({ onSelect }: { onSelect: (label: string) => void }) {
 }
 
 export default function SkillsSphere() {
-  const [selected, setSelected] = useState<string | null>(null);
+  const [, setSelected] = useState<string | null>(null);
   return (
     <section id="skills" className="section nav-offset">
       <div className="mx-auto max-w-7xl px-6">

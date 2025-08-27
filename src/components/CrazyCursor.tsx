@@ -108,7 +108,7 @@ export default function CrazyCursor() {
 
     return () => {
       window.removeEventListener("resize", onResize);
-      window.removeEventListener("pointermove", onMove as any);
+      window.removeEventListener("pointermove", onMove);
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
   }, [isDesktop]);

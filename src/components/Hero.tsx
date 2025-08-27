@@ -1,7 +1,8 @@
 "use client";
 // @ts-nocheck
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { Suspense, useMemo, useRef, useState } from "react";
+import { Suspense, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Float, Sphere, MeshDistortMaterial, Stars } from "@react-three/drei";
 
