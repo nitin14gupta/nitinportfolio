@@ -78,6 +78,7 @@ export default function Contact() {
           className="glass neon-ring rounded-2xl p-6"
         >
           <h2 className="text-3xl font-bold neon-text">Let&apos;s Work Together</h2>
+          <p className="mt-2 text-[var(--text-muted)]">Tell me about your project — timeline, goals, and what success looks like.</p>
           <div className="mt-6 grid grid-cols-1 gap-4">
             <input
               name="name"

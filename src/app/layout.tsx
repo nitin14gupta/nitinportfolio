@@ -16,8 +16,65 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nitin Gupta | React Native Developer",
-  description: "3D Neon Portfolio – React Native, Three.js, GSAP, Next.js",
+  title: {
+    default: "Nitin Gupta — I build fast, scalable web & mobile apps",
+    template: "%s | Nitin Gupta",
+  },
+  description:
+    "I help startups and teams ship fast, scalable web & mobile apps using React Native, Next.js, and TypeScript.",
+  keywords: [
+    "React Native",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Mobile Apps",
+    "Web Apps",
+    "Freelance Developer",
+    "Frontend Engineer",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Nitin Gupta — I build fast, scalable web & mobile apps",
+    description:
+      "I help startups and teams ship fast, scalable web & mobile apps using React Native, Next.js, and TypeScript.",
+    url: "/",
+    siteName: "Nitin Gupta Portfolio",
+    images: [
+      {
+        url: "/images/hero.png",
+        width: 1200,
+        height: 630,
+        alt: "Nitin Gupta — React Native & Web Engineer",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nitin Gupta — I build fast, scalable web & mobile apps",
+    description:
+      "I help startups and teams ship fast, scalable web & mobile apps using React Native, Next.js, and TypeScript.",
+    images: ["/images/hero.png"],
+    creator: "@CMNitingupta",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+  themeColor: "#BC13FE",
 };
 
 export default function RootLayout({
@@ -27,6 +84,42 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Nitin Gupta",
+              url: "https://your-domain.com/",
+              jobTitle: "React Native Developer",
+              email: "mailto:nitincmgupta@email.com",
+              sameAs: [
+                "https://www.linkedin.com/in/nitinCMgupta/",
+                "https://x.com/CMNitingupta",
+                "https://www.instagram.com/nitin.shh_"
+              ],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Nitin Gupta Portfolio",
+              url: "https://your-domain.com/",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: "https://your-domain.com/?q={search_term_string}",
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{""}
         {/* Motion toggle + preloader */}
         <script

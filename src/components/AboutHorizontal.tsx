@@ -28,14 +28,14 @@ export default function AboutHorizontal() {
               </div>
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold neon-text">Nitin Gupta</h2>
-                <p className="mt-1 text-[var(--accent-cyan)]">React Native Developer • ML Engineer • AI Enthusiast</p>
+                <p className="mt-1 text-[var(--accent-cyan)]">React Native Developer • Frontend Engineer</p>
                 <p className="mt-3 text-[var(--text-muted)]">
-                  I build high‑performance mobile apps and futuristic interfaces with React Native, Three.js and GSAP. I love
-                  crafting playable micro‑interactions, smooth scroll experiences, and polished design systems in neon purple.
+                  I design and build production‑ready web and mobile apps. I use React Native, Next.js and TypeScript to ship
+                  fast, reliable experiences with clean UI, smooth motion, and measurable performance.
                 </p>
                 <div className="mt-5 flex flex-wrap gap-3">
-                  <a href="#projects" className="rounded-xl bg-[var(--primary)] px-4 py-2 text-black font-semibold shadow-[var(--glow-lg)]">View Work</a>
-                  <a href="#contact" className="rounded-xl border border-[rgba(188,19,254,0.35)] px-4 py-2">Get in Touch</a>
+                  <a href="#projects" className="rounded-xl bg-[var(--primary)] px-4 py-2 text-black font-semibold shadow-[var(--glow-lg)]">See projects</a>
+                  <a href="#contact" className="rounded-xl border border-[rgba(188,19,254,0.35)] px-4 py-2">DM me / email me</a>
                 </div>
               </div>
             </div>
@@ -77,13 +77,13 @@ export default function AboutHorizontal() {
                   year: "2023–Present",
                   role: "React Native Developer (Freelance)",
                   body:
-                    "Shipping cross‑platform apps, performance tuning, native modules, and animations with Reanimated/GSAP.",
+                    "I help founders go from idea to launch: cross‑platform apps, performance tuning, and rich UI motion.",
                 },
                 {
                   year: "2022–2023",
-                  role: "Graphic/Brand Designer → Product UI",
+                  role: "Designer → Frontend Engineer",
                   body:
-                    "Led campaign assets and booth graphics; transitioned to UI engineering bringing motion design into apps.",
+                    "I moved from brand design into UI engineering to build the polished interactions I wanted to design.",
                 },
               ].map((t) => (
                 <div key={t.year} className="relative rounded-xl border border-[rgba(188,19,254,0.25)] p-4">

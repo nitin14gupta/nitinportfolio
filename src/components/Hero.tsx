@@ -141,12 +141,17 @@ export default function Hero() {
     <section id="home" className="section min-h-screen flex items-center">
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-10 px-6 md:grid-cols-2 md:gap-12">
         <div className="flex flex-col justify-center">
-          <p className="text-sm text-[var(--text-muted)]">Hello, I&apos;m</p>
+          <p className="text-sm text-[var(--text-muted)]">Hi, I&apos;m</p>
           <h1 className="mt-2 text-5xl md:text-6xl font-extrabold tracking-tight neon-text">NITIN GUPTA</h1>
-          <p className="mt-4 text-xl md:text-2xl text-[var(--text-muted)]">React Native Developer</p>
+          <p className="mt-4 text-xl md:text-2xl text-[var(--text-muted)]">
+            I help startups build fast, scalable web & mobile apps.
+          </p>
+          <p className="mt-2 text-[var(--text-muted)] max-w-xl">
+            React Native, Next.js, TypeScript. From MVPs to production apps with crisp UI, smooth animations, and real performance.
+          </p>
           <div className="mt-8 flex gap-4">
-            <a href="#projects" className="px-6 py-3 rounded-xl bg-[var(--primary)] text-black font-semibold shadow-[var(--glow-lg)]">View My Work</a>
-            <a href="#contact" className="px-6 py-3 rounded-xl border border-[rgba(188,19,254,0.45)] text-white hover:bg-[rgba(188,19,254,0.08)]">Get in Touch</a>
+            <a href="#projects" className="px-6 py-3 rounded-xl bg-[var(--primary)] text-black font-semibold shadow-[var(--glow-lg)]">See case studies</a>
+            <a href="#contact" className="px-6 py-3 rounded-xl border border-[rgba(188,19,254,0.45)] text-white hover:bg-[rgba(188,19,254,0.08)]">Book a free consult</a>
           </div>
           <div className="mt-6 inline-flex items-center gap-2 text-sm text-[var(--text-muted)]">
             <span className="h-2 w-2 rounded-full bg-[var(--primary)] shadow-[var(--glow-sm)]" />
